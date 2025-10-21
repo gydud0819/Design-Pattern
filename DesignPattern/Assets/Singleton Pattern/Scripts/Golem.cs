@@ -7,12 +7,12 @@ public class Golem : MonoBehaviour
     [SerializeField] Vector3 size;
     [SerializeField] private float min = 1f;
 
-  
+   
     private void Update()
     {
         float scale = Mathf.PingPong(Time.time, min);
         transform.localScale = new Vector3(scale, scale, scale);
-       
+        //if (GameManager.Instance.State == false) { return; }
 
     }
 }
